@@ -4,7 +4,11 @@
   "type": "module",
   "description": "[![Actions Status](https://github.com/TatuAnat/qa-auto-engineer-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/TatuAnat/qa-auto-engineer-javascript-project-44/actions)",
   "main": "index.js",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "scripts": {
+      "prova": "echo 'Hello, Tania'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
