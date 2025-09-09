@@ -8,7 +8,7 @@
     "brain-games": "bin/brain-games.js"
   },
   "scripts": {
-      "prova": "echo 'Hello, Tania'",
+    "prova": "echo 'Hello, Tania'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/TatuAnat/qa-auto-engineer-javascript-project-44/issues"
   },
-  "homepage": "https://github.com/TatuAnat/qa-auto-engineer-javascript-project-44#readme"
+  "homepage": "https://github.com/TatuAnat/qa-auto-engineer-javascript-project-44#readme",
+  "dependencies": {
+    "dayjs": "^1.11.18",
+    "readline-sync": "^1.4.10"
+  }
 }
