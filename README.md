@@ -23,4 +23,6 @@ npm install
 
 # Линкуем пакет глобально
 npm link
+# Запуск игры
+brain-even
 ```
