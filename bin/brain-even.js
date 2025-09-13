@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import readlineSync from "readline-sync";
+import crypto from "crypto";
 
 export default function brainEven() {
   console.log("Welcome to the Brain Games!");
@@ -10,7 +11,7 @@ export default function brainEven() {
 
   let correctAnswer = 0;
   while (correctAnswer < 3) {
-    const n = Math.floor(Math.random() * 100) + 1;
+    const n = crypto.randomInt(1, 101);
     let correct = "yes";
     if (n % 2 !== 0) {
       correct = "no";
