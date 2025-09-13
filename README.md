@@ -26,3 +26,7 @@ npm link
 # Запуск игры
 brain-even
 ```
+
+## Demo
+
+[![asciicast Brain Even Game]](https://asciinema.org/a/Wbrv8dpaK85ZUj7v6ALp7mdzp)
