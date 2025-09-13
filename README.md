@@ -27,6 +27,6 @@ npm link
 brain-even
 ```
 
-## Demo
+## Demo: Brain Even Game
 
-[![asciicast Brain Even Game]](https://asciinema.org/a/Wbrv8dpaK85ZUj7v6ALp7mdzp)
+[![asciicast](https://asciinema.org/a/Wbrv8dpaK85ZUj7v6ALp7mdzp.svg)](https://asciinema.org/a/Wbrv8dpaK85ZUj7v6ALp7mdzp)
