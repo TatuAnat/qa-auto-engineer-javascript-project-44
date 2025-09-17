@@ -34,3 +34,7 @@ brain-even
 ## Demo: Brain Calc Game
 
 [![asciicast](https://asciinema.org/a/5Tr0v9sTTJyhMomsMIaLYPIsP.svg)](https://asciinema.org/a/5Tr0v9sTTJyhMomsMIaLYPIsP)
+
+## Demo: Brain Gcd Game
+
+[![asciicast](https://asciinema.org/a/YWQ5Q3IDOg0JLQBL4PAkZwfrA.svg)](https://asciinema.org/a/YWQ5Q3IDOg0JLQBL4PAkZwfrA)
