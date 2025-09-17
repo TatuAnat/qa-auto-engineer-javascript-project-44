@@ -30,3 +30,7 @@ brain-even
 ## Demo: Brain Even Game
 
 [![asciicast](https://asciinema.org/a/Wbrv8dpaK85ZUj7v6ALp7mdzp.svg)](https://asciinema.org/a/Wbrv8dpaK85ZUj7v6ALp7mdzp)
+
+## Demo: Brain Calc Game
+
+[![asciicast](https://asciinema.org/a/5Tr0v9sTTJyhMomsMIaLYPIsP.svg)](https://asciinema.org/a/5Tr0v9sTTJyhMomsMIaLYPIsP)
