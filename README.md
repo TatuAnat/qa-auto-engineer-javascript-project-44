@@ -38,3 +38,7 @@ brain-even
 ## Demo: Brain Gcd Game
 
 [![asciicast](https://asciinema.org/a/YWQ5Q3IDOg0JLQBL4PAkZwfrA.svg)](https://asciinema.org/a/YWQ5Q3IDOg0JLQBL4PAkZwfrA)
+
+## Demo: Brain Progression Game
+
+[![asciicast](https://asciinema.org/a/SaGtZRafsbxRLaZZlEbe1Eyct.svg)](https://asciinema.org/a/SaGtZRafsbxRLaZZlEbe1Eyct)
