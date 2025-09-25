@@ -42,3 +42,7 @@ brain-even
 ## Demo: Brain Progression Game
 
 [![asciicast](https://asciinema.org/a/SaGtZRafsbxRLaZZlEbe1Eyct.svg)](https://asciinema.org/a/SaGtZRafsbxRLaZZlEbe1Eyct)
+
+## Demo: Brain Prime Game
+
+[![asciicast](https://asciinema.org/a/CwcSxN3Ht4upyeGjL89yDG5wH.svg)](https://asciinema.org/a/CwcSxN3Ht4upyeGjL89yDG5wH)
