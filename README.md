@@ -29,20 +29,20 @@ brain-even
 
 ## Demo: Brain Even Game
 
-[![asciicast](https://asciinema.org/a/Wbrv8dpaK85ZUj7v6ALp7mdzp.svg)](https://asciinema.org/a/Wbrv8dpaK85ZUj7v6ALp7mdzp)
+[![asciicast](https://asciinema.org/a/745640.svg)](https://asciinema.org/a/745640)
 
 ## Demo: Brain Calc Game
 
-[![asciicast](https://asciinema.org/a/5Tr0v9sTTJyhMomsMIaLYPIsP.svg)](https://asciinema.org/a/5Tr0v9sTTJyhMomsMIaLYPIsP)
+[![asciicast](https://asciinema.org/a/745639.svg)](https://asciinema.org/a/745639)
 
 ## Demo: Brain Gcd Game
 
-[![asciicast](https://asciinema.org/a/YWQ5Q3IDOg0JLQBL4PAkZwfrA.svg)](https://asciinema.org/a/YWQ5Q3IDOg0JLQBL4PAkZwfrA)
+[![asciicast](https://asciinema.org/a/745643.svg)](https://asciinema.org/a/745643)
 
 ## Demo: Brain Progression Game
 
-[![asciicast](https://asciinema.org/a/SaGtZRafsbxRLaZZlEbe1Eyct.svg)](https://asciinema.org/a/SaGtZRafsbxRLaZZlEbe1Eyct)
+[![asciicast](https://asciinema.org/a/745644.svg)](https://asciinema.org/a/745644)
 
 ## Demo: Brain Prime Game
 
-[![asciicast](https://asciinema.org/a/CwcSxN3Ht4upyeGjL89yDG5wH.svg)](https://asciinema.org/a/CwcSxN3Ht4upyeGjL89yDG5wH)
+[![asciicast](https://asciinema.org/a/745645.svg)](https://asciinema.org/a/745645)
