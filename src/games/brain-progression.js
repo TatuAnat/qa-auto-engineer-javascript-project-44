@@ -1,0 +1,47 @@
+#!/usr/bin/env node
+
+import {
+  checkAnswer,
+  askUserAnswer,
+  greetUser,
+  congratulationsMessage,
+} from "..";
+import { randomInteger } from "../utils";
+
+function generateArithmeticProgression(start, step, length) {
+  const progression = [];
+  for (let i = 0; i < length; i++) {
+    progression.push(start + i * step);
+  }
+  return progression;
+}
+
+export default function brainProgression() {
+  console.log("starting brainProgresssion");
+
+  const name = greetUser();
+
+  console.log("What number is missing in the progression?");
+
+  for (let i = 0; i < 3; i++) {
+    const length = 10;
+    const start = randomInteger(1, 11);
+    const step = randomInteger(1, 6);
+
+    const progression = generateArithmeticProgression(start, step, length);
+
+    const hiddenIndex = randomInteger(0, progression.length);
+    const correctAnswer = progression[hiddenIndex];
+    progression[hiddenIndex] = "..";
+
+    const userAnswer = askUserAnswer(progression.join(" "));
+
+    if (!checkAnswer(correctAnswer, userAnswer)) {
+      return;
+    }
+  }
+
+  congratulationsMessage(name);
+}
+
+brainProgression();

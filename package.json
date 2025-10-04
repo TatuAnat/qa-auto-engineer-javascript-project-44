@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/TatuAnat/qa-auto-engineer-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/TatuAnat/qa-auto-engineer-javascript-project-44/actions)",
+  "description": "Учебный CLI-набор игр «Brain Games»: чет/нечет, калькулятор, НОД, прогрессия и простые числа (Hexlet)",
   "main": "index.js",
   "bin": {
     "brain-games": "bin/brain-games.js",
@@ -27,7 +27,6 @@
   },
   "homepage": "https://github.com/TatuAnat/qa-auto-engineer-javascript-project-44#readme",
   "dependencies": {
-    "dayjs": "^1.11.18",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
