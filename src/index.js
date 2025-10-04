@@ -31,3 +31,24 @@ export function askUserAnswer(question) {
 export function congratulationsMessage(name) {
   console.log(`Congratulations, ${name}!`);
 }
+
+// Centralized game runner for 3 rounds
+export function runGame(getRoundData, gameDescription) {
+  const name = greetUser();
+  if (gameDescription) {
+    console.log(gameDescription);
+  }
+  for (let i = 0; i < 3; i++) {
+    const { question, correctAnswer } = getRoundData();
+    const userAnswer = askUserAnswer(question);
+    if (
+      !checkAnswer(
+        correctAnswer,
+        isNaN(Number(userAnswer)) ? userAnswer : Number(userAnswer)
+      )
+    ) {
+      return;
+    }
+  }
+  congratulationsMessage(name);
+}
