@@ -32,7 +32,6 @@ export function congratulationsMessage(name) {
   console.log(`Congratulations, ${name}!`);
 }
 
-// Centralized game runner for 3 rounds
 export function runGame(getRoundData, gameDescription) {
   const name = greetUser();
   if (gameDescription) {
