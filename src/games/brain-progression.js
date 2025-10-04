@@ -5,8 +5,8 @@ import {
   askUserAnswer,
   greetUser,
   congratulationsMessage,
-} from "..";
-import { randomInteger } from "../utils";
+} from "../index.js";
+import { randomInteger } from "../utils.js";
 
 function generateArithmeticProgression(start, step, length) {
   const progression = [];

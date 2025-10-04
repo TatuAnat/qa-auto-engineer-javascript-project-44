@@ -5,8 +5,8 @@ import {
   askUserAnswer,
   greetUser,
   congratulationsMessage,
-} from "..";
-import { randomInteger } from "../utils";
+} from "../index.js";
+import { randomInteger } from "../utils.js";
 
 function gcd(a, b) {
   while (b !== 0) {
@@ -18,7 +18,7 @@ function gcd(a, b) {
   return a;
 }
 
-function brainGcd() {
+export default function brainGcd() {
   const name = greetUser();
   console.log("Find the greatest common divisor of given numbers.");
 

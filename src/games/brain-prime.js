@@ -4,8 +4,8 @@ import {
   askUserAnswer,
   greetUser,
   congratulationsMessage,
-} from "..";
-import { randomInteger } from "../utils";
+} from "../index.js";
+import { randomInteger } from "../utils.js";
 
 function isPrime(n) {
   if (n <= 1) return false;

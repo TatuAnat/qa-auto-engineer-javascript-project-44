@@ -5,8 +5,8 @@ import {
   askUserAnswer,
   greetUser,
   congratulationsMessage,
-} from "..";
-import { randomInteger } from "../utils";
+} from "../index.js";
+import { randomInteger } from "../utils.js";
 
 export default function brainEven() {
   const name = greetUser();
