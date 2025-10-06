@@ -3,6 +3,19 @@
 import { runGame } from "../index.js";
 import { randomInteger } from "../utils.js";
 
+function newFunction(num1, operator, num2) {
+  switch (operator) {
+    case "+":
+      return num1 + num2;
+    case "-":
+      return num1 - num2;
+    case "*":
+      return num1 * num2;
+    default:
+      throw new Error(`Unknown operator`);
+  }
+}
+
 export function getRoundData() {
   const operators = ["+", "-", "*"];
   let num1 = randomInteger(1, 50);
@@ -12,19 +25,8 @@ export function getRoundData() {
 
   let operator = operators[operatorRandomIndex];
 
-  let correctAnswer = undefined;
   const question = `${num1} ${operator} ${num2}`;
-  switch (operator) {
-    case "+":
-      correctAnswer = num1 + num2;
-      break;
-    case "-":
-      correctAnswer = num1 - num2;
-      break;
-    case "*":
-      correctAnswer = num1 * num2;
-      break;
-  }
+  const correctAnswer = newFunction(num1, operator, num2);
 
   return { correctAnswer, question };
 }

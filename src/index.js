@@ -1,16 +1,18 @@
 import readlineSync from "readline-sync";
 
+export const ROUNDS_GAME = 3;
+
 export function checkAnswer(correctAnswer, userAnswer) {
   if (correctAnswer === userAnswer) {
     console.log("Correct!");
     return true;
-  } else {
-    console.log(
-      `${userAnswer} is wrong answer ;(. Correct answer was '${correctAnswer}'.`
-    );
-
-    return false;
   }
+
+  console.log(
+    `${userAnswer} is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+  );
+
+  return false;
 }
 
 export function greetUser() {
@@ -37,7 +39,7 @@ export function runGame(getRoundData, gameDescription) {
   if (gameDescription) {
     console.log(gameDescription);
   }
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < ROUNDS_GAME; i++) {
     const { question, correctAnswer } = getRoundData();
     const userAnswer = askUserAnswer(question);
     if (
