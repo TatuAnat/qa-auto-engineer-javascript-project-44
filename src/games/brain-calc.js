@@ -39,7 +39,7 @@ export default function brainCalc() {
   console.log("What is the result of the expression?");
 
   for (let i = 0; i < 3; i++) {
-    const { question, correctAnswer } = getRoundData();
+    const { correctAnswer, question } = getRoundData();
 
     const userAnswer = askUserAnswer(question);
 

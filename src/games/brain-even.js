@@ -8,23 +8,27 @@ import {
 } from "../index.js";
 import { randomInteger } from "../utils.js";
 
+function getRoundData() {
+  const question = randomInteger(1, 101);
+  let correctAnswer = "yes";
+  if (question % 2 !== 0) {
+    correctAnswer = "no";
+  }
+
+  return { correctAnswer, question };
+}
+
 export default function brainEven() {
   const name = greetUser();
 
-  let correctAnswerCounter = 0;
-  while (correctAnswerCounter < 3) {
-    const n = randomInteger(1, 101);
-    let correctAnswer = "yes";
-    if (n % 2 !== 0) {
-      correctAnswer = "no";
-    }
+  for (let i = 0; i < 3; i++) {
+    const { correctAnswer, question } = getRoundData();
 
-    const userAnswer = askUserAnswer(n);
+    const userAnswer = askUserAnswer(question);
 
-    if (!checkAnswer(correctAnswer, Number(userAnswer))) {
+    if (!checkAnswer(correctAnswer, userAnswer)) {
       return;
     }
-    correctAnswerCounter++;
   }
 
   congratulationsMessage(name);

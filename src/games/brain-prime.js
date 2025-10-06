@@ -21,15 +21,19 @@ function isPrime(n) {
   return true;
 }
 
+export function getRoundData() {
+  const randomNumber = randomInteger(2, 100);
+  const correctAnswer = isPrime(randomNumber) ? "yes" : "no";
+  const question = randomNumber;
+  return { correctAnswer, question };
+}
 export default function brainPrime() {
   const name = greetUser();
   console.log("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
   for (let i = 0; i < 3; i++) {
-    const randomNumber = randomInteger(2, 100);
+    const { correctAnswer, question } = getRoundData();
 
-    const userAnswer = askUserAnswer(randomNumber);
-
-    const correctAnswer = isPrime(randomNumber) ? "yes" : "no";
+    const userAnswer = askUserAnswer(question);
 
     if (!checkAnswer(correctAnswer.toLowerCase(), userAnswer.toLowerCase())) {
       return;

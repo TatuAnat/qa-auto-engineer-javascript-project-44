@@ -22,10 +22,10 @@ export function greetUser() {
 }
 
 export function askUserAnswer(question) {
-  if (question !== undefined && question.length) {
+  if (question !== undefined) {
     console.log(`Question: ${question} `);
   }
-  return readlineSync.question("Your answer: ").trim().toLowerCase();
+  return readlineSync.question("Your answer: ");
 }
 
 export function congratulationsMessage(name) {
