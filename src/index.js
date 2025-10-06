@@ -48,6 +48,7 @@ export function runGame(getRoundData, gameDescription) {
         isNaN(Number(userAnswer)) ? userAnswer : Number(userAnswer)
       )
     ) {
+      console.log(`Let's try again, ${name}!`);
       return;
     }
   }
