@@ -1,14 +1,9 @@
 #!/usr/bin/env node
 
-import {
-  checkAnswer,
-  askUserAnswer,
-  greetUser,
-  congratulationsMessage,
-} from "../index.js";
+import { runGame } from "../index.js";
 import { randomInteger } from "../utils.js";
 
-function getRoundData() {
+export function getRoundData() {
   const operators = ["+", "-", "*"];
   let num1 = randomInteger(1, 50);
   let num2 = randomInteger(1, 50);
@@ -34,20 +29,4 @@ function getRoundData() {
   return { correctAnswer, question };
 }
 
-export default function brainCalc() {
-  const name = greetUser();
-  console.log("What is the result of the expression?");
-
-  for (let i = 0; i < 3; i++) {
-    const { correctAnswer, question } = getRoundData();
-
-    const userAnswer = askUserAnswer(question);
-
-    if (!checkAnswer(correctAnswer, Number(userAnswer))) {
-      return;
-    }
-  }
-
-  congratulationsMessage(name);
-}
-brainCalc();
+runGame(getRoundData, "Brain Calc");

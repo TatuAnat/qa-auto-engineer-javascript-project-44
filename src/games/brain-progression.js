@@ -1,11 +1,6 @@
 #!/usr/bin/env node
 
-import {
-  checkAnswer,
-  askUserAnswer,
-  greetUser,
-  congratulationsMessage,
-} from "../index.js";
+import { runGame } from "../index.js";
 import { randomInteger } from "../utils.js";
 
 function generateArithmeticProgression(start, step, length) {
@@ -31,23 +26,4 @@ export function getRoundData() {
   return { correctAnswer, question };
 }
 
-export default function brainProgression() {
-  console.log("starting brainProgresssion");
-
-  const name = greetUser();
-
-  console.log("What number is missing in the progression?");
-  for (let i = 0; i < 3; i++) {
-    const { correctAnswer, question } = getRoundData();
-
-    const userAnswer = askUserAnswer(question);
-
-    if (!checkAnswer(correctAnswer, userAnswer)) {
-      return;
-    }
-  }
-
-  congratulationsMessage(name);
-}
-
-brainProgression();
+runGame(getRoundData, "What number is missing in the progression?");
