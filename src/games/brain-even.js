@@ -14,7 +14,10 @@ function getRoundData() {
 }
 
 const brainEven = () => {
-  runGame(getRoundData, "Brain Even");
+  runGame(
+    getRoundData,
+    'Answer "yes" if the number is even, otherwise answer "no".'
+  );
 };
 
 export default brainEven;
