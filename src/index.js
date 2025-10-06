@@ -9,7 +9,7 @@ export function checkAnswer(correctAnswer, userAnswer) {
   }
 
   console.log(
-    `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+    `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
   )
 
   return false
@@ -45,7 +45,7 @@ export function runGame(getRoundData, gameDescription) {
     if (
       !checkAnswer(
         correctAnswer,
-        isNaN(Number(userAnswer)) ? userAnswer : Number(userAnswer)
+        isNaN(Number(userAnswer)) ? userAnswer : Number(userAnswer),
       )
     ) {
       console.log(`Let's try again, ${name}!`)
