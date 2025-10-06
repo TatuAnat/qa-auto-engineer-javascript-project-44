@@ -13,4 +13,8 @@ function getRoundData() {
   return { correctAnswer, question };
 }
 
-runGame(getRoundData, "Brain Even");
+const brainEven = () => {
+  runGame(getRoundData, "Brain Even");
+};
+
+export default brainEven;

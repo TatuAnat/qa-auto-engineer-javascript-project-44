@@ -26,4 +26,7 @@ function getRoundData() {
   return { correctAnswer, question };
 }
 
-runGame(getRoundData, "Find the greatest common divisor of given numbers.");
+const brainGcd = () => {
+  runGame(getRoundData, "Find the greatest common divisor of given numbers.");
+};
+export default brainGcd;

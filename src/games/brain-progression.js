@@ -26,4 +26,7 @@ export function getRoundData() {
   return { correctAnswer, question };
 }
 
-runGame(getRoundData, "What number is missing in the progression?");
+const brainProgression = () => {
+  runGame(getRoundData, "What number is missing in the progression?");
+};
+export default brainProgression;

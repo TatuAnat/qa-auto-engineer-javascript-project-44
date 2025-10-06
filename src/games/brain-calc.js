@@ -31,4 +31,8 @@ export function getRoundData() {
   return { correctAnswer, question };
 }
 
-runGame(getRoundData, "Brain Calc");
+const brainCalc = () => {
+  runGame(getRoundData, "Brain Calc");
+};
+
+export default brainCalc;

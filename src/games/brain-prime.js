@@ -24,7 +24,11 @@ export function getRoundData() {
   return { correctAnswer, question };
 }
 
-runGame(
-  getRoundData,
-  "Answer 'yes' if given number is prime. Otherwise answer 'no'."
-);
+const brainPrime = () => {
+  runGame(
+    getRoundData,
+    "Answer 'yes' if given number is prime. Otherwise answer 'no'."
+  );
+};
+
+export default brainPrime;
