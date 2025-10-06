@@ -32,7 +32,7 @@ export function getRoundData() {
 }
 
 const brainCalc = () => {
-  runGame(getRoundData, "Brain Calc");
+  runGame(getRoundData, "What is the result of the expression?");
 };
 
 export default brainCalc;
