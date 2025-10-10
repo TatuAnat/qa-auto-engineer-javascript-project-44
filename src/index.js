@@ -1,56 +1,31 @@
-import readlineSync from 'readline-sync'
+import readlineSync from 'readline-sync';
 
-export const ROUNDS_GAME = 3
+const ROUNDS_COUNT = 3;
 
-export function checkAnswer(correctAnswer, userAnswer) {
-  if (correctAnswer === userAnswer) {
-    console.log('Correct!')
-    return true
-  }
+const runGame = (description, generateRound) => {
+  console.warn('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.warn(`Hello, ${name}!`);
+  console.warn(description);
 
-  console.log(
-    `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
-  )
+  for (let i = 0; i < ROUNDS_COUNT; i += 1) {
+    const { question, correctAnswer } = generateRound();
+    console.warn(`Question: ${question}`);
 
-  return false
-}
+    const userAnswer = readlineSync.question('Your answer: ');
 
-export function greetUser() {
-  console.log('Welcome to the Brain Games!')
-  const name = readlineSync.question('May I have your name? ')
-  console.log('Hello, ' + name + '!')
-
-  return name
-}
-
-export function askUserAnswer(question) {
-  if (question !== undefined) {
-    console.log(`Question: ${question} `)
-  }
-  return readlineSync.question('Your answer: ')
-}
-
-export function congratulationsMessage(name) {
-  console.log(`Congratulations, ${name}!`)
-}
-
-export function runGame(getRoundData, gameDescription) {
-  const name = greetUser()
-  if (gameDescription) {
-    console.log(gameDescription)
-  }
-  for (let i = 0; i < ROUNDS_GAME; i += 1) {
-    const { question, correctAnswer } = getRoundData()
-    const userAnswer = askUserAnswer(question)
-    if (
-      !checkAnswer(
-        correctAnswer,
-        isNaN(Number(userAnswer)) ? userAnswer : Number(userAnswer),
-      )
-    ) {
-      console.log(`Let's try again, ${name}!`)
-      return
+    if (userAnswer !== correctAnswer) {
+      console.warn(
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
+      );
+      console.warn(`Let's try again, ${name}!`);
+      return;
     }
+
+    console.warn('Correct!');
   }
-  congratulationsMessage(name)
-}
+
+  console.warn(`Congratulations, ${name}!`);
+};
+
+export default runGame;

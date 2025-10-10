@@ -1,32 +1,35 @@
 #!/usr/bin/env node
 
 import { runGame } from '../index.js'
-import { randomInteger } from '../utils.js'
 
-function gcd(a, b) {
-  let x = a
-  let y = b
+const findGcd = (num1, num2) => {
+  let a = num1;
+  let b = num2;
 
-  while (y !== 0) {
-    const temp = y
-    y = x % y
-    x = temp
+  while (b !== 0) {
+    [a, b] = [b, a % b];
   }
 
-  return x
-}
+  return a;
+};
 
-function getRoundData() {
-  let num1 = randomInteger(1, 50)
-  let num2 = randomInteger(1, 50)
+const description = 'Find the greatest common divisor of given numbers.';
 
-  const correctAnswer = gcd(num1, num2)
-  const question = `${num1} ${num2}`
+const generateRound = () => {
+  const num1 = Math.floor(Math.random() * 100) + 1;
+  const num2 = Math.floor(Math.random() * 100) + 1;
 
-  return { correctAnswer, question }
-}
+  const question = `${num1} ${num2}`;
+  const correctAnswer = String(findGcd(num1, num2));
 
-const brainGcd = () => {
-  runGame(getRoundData, 'Find the greatest common divisor of given numbers.')
-}
-export default brainGcd
+  return {
+    question,
+    correctAnswer,
+  };
+};
+
+const playBrainGcd = () => {
+  runGame(description, generateRound);
+};
+
+export default playBrainGcd;

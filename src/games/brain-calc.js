@@ -1,38 +1,38 @@
-#!/usr/bin/env node
+import runGame from '../index.js';
 
-import { runGame } from '../index.js'
-import { randomInteger } from '../utils.js'
+const description = 'What is the result of the expression?';
+const operators = ['+', '-', '*'];
 
-function newFunction(num1, operator, num2) {
+const generateRound = () => {
+  const num1 = Math.floor(Math.random() * 100);
+  const num2 = Math.floor(Math.random() * 100);
+  const operator = operators[Math.floor(Math.random() * operators.length)];
+
+  const question = `${num1} ${operator} ${num2}`;
+  let correctAnswer;
+
   switch (operator) {
     case '+':
-      return num1 + num2
+      correctAnswer = num1 + num2;
+      break;
     case '-':
-      return num1 - num2
+      correctAnswer = num1 - num2;
+      break;
     case '*':
-      return num1 * num2
+      correctAnswer = num1 * num2;
+      break;
     default:
-      throw new Error('Unknown operator')
+      throw new Error(`Unknown operator: ${operator}`);
   }
-}
 
-export function getRoundData() {
-  const operators = ['+', '-', '*']
-  let num1 = randomInteger(1, 50)
-  let num2 = randomInteger(1, 50)
+  return {
+    question,
+    correctAnswer: String(correctAnswer),
+  };
+};
 
-  let operatorRandomIndex = randomInteger(0, operators.length)
+const playBrainCalc = () => {
+  runGame(description, generateRound);
+};
 
-  let operator = operators[operatorRandomIndex]
-
-  const question = `${num1} ${operator} ${num2}`
-  const correctAnswer = newFunction(num1, operator, num2)
-
-  return { correctAnswer, question }
-}
-
-const brainCalc = () => {
-  runGame(getRoundData, 'What is the result of the expression?')
-}
-
-export default brainCalc
+export default playBrainCalc;

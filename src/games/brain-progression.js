@@ -1,32 +1,34 @@
 #!/usr/bin/env node
 
 import { runGame } from '../index.js'
-import { randomInteger } from '../utils.js'
 
-function generateArithmeticProgression(start, step, length) {
-  const progression = []
-  for (let i = 0; i < length; i++) {
-    progression.push(start + i * step)
+const generateProgression = (start, step, length) => {
+  const progression = [];
+  for (let i = 0; i < length; i += 1) {
+    progression.push(start + i * step);
   }
-  return progression
-}
+  return progression;
+};
 
-export function getRoundData() {
-  const length = 10
-  const start = randomInteger(1, 11)
-  const step = randomInteger(1, 6)
+const description = 'What number is missing in the progression?';
 
-  const progression = generateArithmeticProgression(start, step, length)
+const generateRound = () => {
+  const start = Math.floor(Math.random() * 10) + 1;
+  const step = Math.floor(Math.random() * 10) + 1;
+  const length = Math.floor(Math.random() * 6) + 5;
 
-  const hiddenIndex = randomInteger(0, progression.length)
-  const correctAnswer = progression[hiddenIndex]
-  progression[hiddenIndex] = '..'
+  const progression = generateProgression(start, step, length);
+  const hiddenIndex = Math.floor(Math.random() * length);
 
-  const question = progression.join(' ')
-  return { correctAnswer, question }
-}
+  const correctAnswer = String(progression[hiddenIndex]);
+  progression[hiddenIndex] = '..';
 
-const brainProgression = () => {
-  runGame(getRoundData, 'What number is missing in the progression?')
-}
-export default brainProgression
+  const question = progression.join(' ');
+  return { question, correctAnswer };
+};
+
+const playBrainProgression = () => {
+  runGame(description, generateRound);
+};
+
+export default playBrainProgression;

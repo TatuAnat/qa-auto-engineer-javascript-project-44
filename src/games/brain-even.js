@@ -1,23 +1,35 @@
-#!/usr/bin/env node
+import readlineSync from 'readline-sync';
+import greetUser from '../cli.js';
 
-import { runGame } from '../index.js'
-import { randomInteger } from '../utils.js'
+const isEven = (number) => number % 2 === 0;
 
-function getRoundData() {
-  const question = randomInteger(1, 101)
-  let correctAnswer = 'yes'
-  if (question % 2 !== 0) {
-    correctAnswer = 'no'
+const playBrainEven = () => {
+  const userName = greetUser();
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+
+  const roundsToWin = 3;
+  let correctAnswers = 0;
+
+  while (correctAnswers < roundsToWin) {
+    const number = Math.floor(Math.random() * 100);
+    console.log(`Question: ${number}`);
+
+    const userAnswer = readlineSync.question('Your answer: ').toLowerCase();
+    const correctAnswer = isEven(number) ? 'yes' : 'no';
+
+    if (userAnswer !== correctAnswer) {
+      console.log(
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
+      );
+      console.log(`Let's try again, ${userName}!`);
+      return;
+    }
+
+    console.log('Correct!');
+    correctAnswers += 1;
   }
 
-  return { correctAnswer, question }
-}
+  console.log(`Congratulations, ${userName}!`);
+};
 
-const brainEven = () => {
-  runGame(
-    getRoundData,
-    'Answer "yes" if the number is even, otherwise answer "no".',
-  )
-}
-
-export default brainEven
+export default playBrainEven;
