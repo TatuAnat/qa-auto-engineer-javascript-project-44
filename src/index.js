@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync'
 
-const ROUNDS_COUNT = 3
+const roundCount = 3
 
 export const runGame = (description, generateRound) => {
   console.warn('Welcome to the Brain Games!')
@@ -8,7 +8,7 @@ export const runGame = (description, generateRound) => {
   console.warn(`Hello, ${name}!`)
   console.warn(description)
 
-  for (let i = 0; i < ROUNDS_COUNT; i += 1) {
+  for (let i = 0; i < roundCount; i += 1) {
     const { question, correctAnswer } = generateRound()
     console.warn(`Question: ${question}`)
 
