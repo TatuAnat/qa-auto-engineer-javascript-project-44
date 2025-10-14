@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { runGame } from '../index.js'
+import { randomInteger } from '../utils.js'
 
 const findGcd = (num1, num2) => {
   let a = num1
@@ -16,8 +17,8 @@ const findGcd = (num1, num2) => {
 const description = 'Find the greatest common divisor of given numbers.'
 
 const generateRound = () => {
-  const num1 = Math.floor(Math.random() * 100) + 1
-  const num2 = Math.floor(Math.random() * 100) + 1
+  const num1 = randomInteger(1, 100)
+  const num2 = randomInteger(1, 100)
 
   const question = `${num1} ${num2}`
   const correctAnswer = String(findGcd(num1, num2))

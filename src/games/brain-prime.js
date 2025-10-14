@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
 import { runGame } from '../index.js'
+import { randomInteger } from '../utils.js'
 
-const isPrime = (num) => {
+const isPrime = num => {
   if (num < 2) return false
   for (let i = 2; i <= Math.sqrt(num); i += 1) {
     if (num % i === 0) return false
@@ -10,11 +11,11 @@ const isPrime = (num) => {
   return true
 }
 
-const description
-  = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+const description =
+  'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 const generateRound = () => {
-  const number = Math.floor(Math.random() * 100) + 1
+  const number = randomInteger(1, 100)
   const question = `${number}`
   const correctAnswer = isPrime(number) ? 'yes' : 'no'
 
