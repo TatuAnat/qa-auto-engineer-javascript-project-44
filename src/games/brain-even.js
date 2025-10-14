@@ -16,7 +16,7 @@ function generateRound() {
 const runBrainEven = () => {
   runGame(
     'Answer "yes" if the number is even, otherwise answer "no".',
-    generateRound
+    generateRound,
   )
 }
 
