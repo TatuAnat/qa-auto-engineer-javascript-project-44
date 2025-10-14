@@ -16,7 +16,7 @@ export const runGame = (description, generateRound) => {
 
     if (userAnswer !== correctAnswer) {
       console.warn(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
       )
       console.warn(`Let's try again, ${name}!`)
       return
