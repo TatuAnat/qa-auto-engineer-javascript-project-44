@@ -1,4 +1,4 @@
-import runGame from '../index.js'
+import { runGame } from '../index.js'
 
 const description = 'What is the result of the expression?'
 const operators = ['+', '-', '*']
