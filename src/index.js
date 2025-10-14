@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync'
 
 const ROUNDS_COUNT = 3
 
-const runGame = (description, generateRound) => {
+export const runGame = (description, generateRound) => {
   console.warn('Welcome to the Brain Games!')
   const name = readlineSync.question('May I have your name? ')
   console.warn(`Hello, ${name}!`)
@@ -27,5 +27,3 @@ const runGame = (description, generateRound) => {
 
   console.warn(`Congratulations, ${name}!`)
 }
-
-export default runGame
