@@ -11,8 +11,8 @@ export default defineConfig([
     extends: ['js/recommended'],
     languageOptions: { globals: globals.browser },
     rules: {
-      'quotes': ['error', 'single', { avoidEscape: true }],
-      'semi': ['error', 'never'],
+      quotes: ['error', 'single', { avoidEscape: true }],
+      semi: ['error', 'never'],
       '@stylistic/indent': ['error', 2],
       '@stylistic/quotes': ['error', 'single'],
       '@stylistic/semi': ['error', 'never'],
