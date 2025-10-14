@@ -3,7 +3,7 @@
 import { runGame } from '../index.js'
 import { randomInteger } from '../utils.js'
 
-export function generateRound() {
+function generateRound() {
   const question = randomInteger(1, 101)
   let correctAnswer = 'yes'
   if (question % 2 !== 0) {
