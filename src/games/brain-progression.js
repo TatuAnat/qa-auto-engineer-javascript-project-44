@@ -27,8 +27,8 @@ const generateRound = () => {
   return { question, correctAnswer }
 }
 
-const playBrainProgression = () => {
+const runBrainProgression = () => {
   runGame(description, generateRound)
 }
 
-export default playBrainProgression
+export default runBrainProgression

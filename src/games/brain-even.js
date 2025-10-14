@@ -13,11 +13,11 @@ export function generateRound() {
   return { correctAnswer, question }
 }
 
-const brainEven = () => {
+const runBrainEven = () => {
   runGame(
     'Answer "yes" if the number is even, otherwise answer "no".',
-    generateRound,
+    generateRound
   )
 }
 
-export default brainEven
+export default runBrainEven

@@ -31,8 +31,8 @@ const generateRound = () => {
   }
 }
 
-const playBrainCalc = () => {
+const runBrainCalc = () => {
   runGame(description, generateRound)
 }
 
-export default playBrainCalc
+export default runBrainCalc

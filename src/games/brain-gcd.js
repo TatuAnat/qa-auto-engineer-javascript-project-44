@@ -28,8 +28,8 @@ const generateRound = () => {
   }
 }
 
-const playBrainGcd = () => {
+const runBrainGcd = () => {
   runGame(description, generateRound)
 }
 
-export default playBrainGcd
+export default runBrainGcd
