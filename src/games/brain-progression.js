@@ -1,7 +1,7 @@
-#!/usr/bin/env node
-
 import { runGame } from '../index.js'
 import { randomInteger } from '../utils.js'
+
+const description = 'What number is missing in the progression?'
 
 const generateProgression = (start, step, length) => {
   const progression = []
@@ -11,15 +11,13 @@ const generateProgression = (start, step, length) => {
   return progression
 }
 
-const description = 'What number is missing in the progression?'
-
 const generateRound = () => {
   const start = randomInteger(1, 20)
   const step = randomInteger(1, 10)
   const length = randomInteger(5, 10)
 
   const progression = generateProgression(start, step, length)
-  const hiddenIndex = randomInteger(0, length - 1)
+  const hiddenIndex = randomInteger(0, progression.length)
 
   const correctAnswer = String(progression[hiddenIndex])
   progression[hiddenIndex] = '..'
