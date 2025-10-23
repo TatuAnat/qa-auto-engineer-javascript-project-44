@@ -3,12 +3,11 @@
 import { runGame } from '../index.js'
 import { randomInteger } from '../utils.js'
 
-function generateRound() {
+const isEven = number => (number % 2 === 0 ? 'yes' : 'no')
+
+const generateRound = () => {
   const question = randomInteger(1, 101)
-  let correctAnswer = 'yes'
-  if (question % 2 !== 0) {
-    correctAnswer = 'no'
-  }
+  let correctAnswer = isEven(question)
 
   return { correctAnswer, question }
 }
@@ -16,7 +15,7 @@ function generateRound() {
 const runBrainEven = () => {
   runGame(
     'Answer "yes" if the number is even, otherwise answer "no".',
-    generateRound,
+    generateRound
   )
 }
 

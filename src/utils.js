@@ -1,5 +1,5 @@
 import crypto from 'node:crypto'
 
-export function randomInteger(start, end) {
+export const randomInteger = (start, end) => {
   return crypto.randomInt(start, end)
 }
