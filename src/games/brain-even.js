@@ -9,7 +9,10 @@ const generateRound = () => {
   const question = randomInteger(1, 101)
   let correctAnswer = isEven(question)
 
-  return { correctAnswer, question }
+  return {
+    question,
+    correctAnswer,
+  }
 }
 
 const runBrainEven = () => {
